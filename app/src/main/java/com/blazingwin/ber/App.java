@@ -2,7 +2,7 @@ package com.blazingwin.ber;
 
 import android.app.Application;
 
-import com.fruitmixer.di.component.DaggerApplicationComponent;
+import com.blazingwin.ber.di.component.DaggerApplicationComponent;
 import com.onesignal.OneSignal;
 
 import javax.inject.Inject;

@@ -1,8 +1,8 @@
 package com.blazingwin.ber.ui.fragments.start.view;
 
 
-import com.fruitmixer.routers.main.MainActivityRouter;
-import com.fruitmixer.ui.base.BaseView;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
+import com.blazingwin.ber.ui.base.BaseView;
 
 ;
 

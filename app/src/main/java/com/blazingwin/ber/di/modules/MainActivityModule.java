@@ -1,11 +1,11 @@
 package com.blazingwin.ber.di.modules;
 
-import com.fruitmixer.di.scopes.ActivityScope;
-import com.fruitmixer.di.scopes.FragmentScope;
-import com.fruitmixer.routers.main.MainActivityRouter;
-import com.fruitmixer.routers.main.MainActivityRouterImpl;
-import com.fruitmixer.ui.fragments.start.view.StartFragment;
-import com.fruitmixer.ui.fragments.web.view.WebFragment;
+import com.blazingwin.ber.di.scopes.ActivityScope;
+import com.blazingwin.ber.di.scopes.FragmentScope;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
+import com.blazingwin.ber.routers.main.MainActivityRouterImpl;
+import com.blazingwin.ber.ui.fragments.start.view.StartFragment;
+import com.blazingwin.ber.ui.fragments.web.view.WebFragment;
 
 import dagger.Binds;
 import dagger.Module;

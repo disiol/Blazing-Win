@@ -2,7 +2,8 @@ package com.blazingwin.ber.di.modules;
 
 import android.util.Base64;
 
-import com.fruitmixer.api.Api;
+import com.blazingwin.ber.api.Api;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -21,7 +22,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.converter.scalars.ScalarsConverterFactory;
 import rx.android.BuildConfig;
 
-import static com.fruitmixer.constants.Constants.URL_FOR_CHECK;
+import static com.blazingwin.ber.constants.Constants.URL_FOR_CHECK;
 
 @Module
 public class ApiModule {

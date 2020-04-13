@@ -1,15 +1,10 @@
 package com.blazingwin.ber.ui.fragments.start.view;
 
 
-import android.Manifest;
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
-import android.hardware.camera2.CameraAccessException;
-import android.hardware.camera2.CameraManager;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,17 +13,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
-import com.fruitmixer.R;
-import com.fruitmixer.databinding.StartBinding;
-import com.fruitmixer.manedger.PreferencesManager;
-import com.fruitmixer.routers.main.MainActivityRouter;
-import com.fruitmixer.ui.base.BaseBindingFragment;
-import com.fruitmixer.ui.fragments.start.presenter.StartPresenter;
 
-import java.util.List;
+import com.blazingwin.ber.R;
+import com.blazingwin.ber.databinding.StartBinding;
+import com.blazingwin.ber.manedger.PreferencesManager;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
+import com.blazingwin.ber.ui.base.BaseBindingFragment;
+import com.blazingwin.ber.ui.fragments.start.presenter.StartPresenter;
 
 import javax.inject.Inject;
 
@@ -134,67 +126,7 @@ public class StartFragment extends BaseBindingFragment<StartPresenter, StartBind
     }
 
     private void showGameFragment() {
-        binding.flashlightLinearLayout.setVisibility(View.VISIBLE);
 
-
-        final boolean hasCameraFlash = getActivity().getPackageManager().
-                hasSystemFeature(PackageManager.FEATURE_CAMERA_FLASH);
-        boolean isEnabled =
-
-                ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.CAMERA)
-                        == PackageManager.PERMISSION_GRANTED;
-
-
-
-
-        torchButton = getActivity().findViewById(R.id.torch_button);
-        torchButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                ActivityCompat.requestPermissions(getActivity(),
-                        new String[]{Manifest.permission.CAMERA}, CAMERA_REQUEST);
-
-                if (hasCameraFlash) {
-                    if (flashLightStatus) {
-                        flashLightOff();
-                    } else {
-                        flashLightOn();
-                    }
-                } else {
-                    Toast.makeText(getActivity(), "No flash available on your device",
-                            Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-
-    private void flashLightOn() {
-        CameraManager cameraManager = (CameraManager) getActivity().getSystemService(Context.CAMERA_SERVICE);
-        torchButton.setText("ON");
-        torchButton.setBackground(getResources().getDrawable(R.drawable.oval_button_grean));
-
-        try {
-            String cameraId = cameraManager.getCameraIdList()[0];
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                cameraManager.setTorchMode(cameraId, true);
-            } else {
-                mCamera = Camera.open();
-                mParameters = mCamera.getParameters();
-                List flashModesList = mParameters
-                        .getSupportedFlashModes();
-                if (flashModesList
-                        .contains(Camera.Parameters.FLASH_MODE_TORCH)) {
-                    mParameters
-                            .setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
-                    mCamera.setParameters(mParameters);
-                    mCamera.startPreview();
-                }
-
-            }
-            flashLightStatus = true;
-        } catch (CameraAccessException e) {
-        }
     }
 
     @Override
@@ -212,41 +144,10 @@ public class StartFragment extends BaseBindingFragment<StartPresenter, StartBind
         }
     }
 
-    private void flashLightOff() {
-
-        torchButton.setText("OFF");
-        torchButton.setBackground(getResources().getDrawable(R.drawable.oval_button_read));
-
-        CameraManager cameraManager = (CameraManager) getActivity().getSystemService(Context.CAMERA_SERVICE);
-
-        try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                String cameraId = cameraManager.getCameraIdList()[0];
-                cameraManager.setTorchMode(cameraId, false);
-                flashLightStatus = false;
-
-            } else { // выключаем вспышку
-                mParameters
-                        .setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
-                mCamera.setParameters(mParameters);
-                mCamera.stopPreview();
-                mCamera.release();
-                mCamera = null;
-
-
-            }
-
-            flashLightStatus = false;
-
-
-        } catch (CameraAccessException e) {
-        }
-    }
-
 
 
     @Override
-    public void showMessage(String message) {
+    public void showMessage(int messageResId, String message) {
 
     }
 

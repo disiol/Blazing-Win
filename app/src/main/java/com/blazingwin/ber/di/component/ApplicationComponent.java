@@ -2,8 +2,9 @@ package com.blazingwin.ber.di.component;
 
 import android.content.Context;
 
-import com.fruitmixer.App;
-import com.fruitmixer.di.modules.ApplicationModule;
+
+import com.blazingwin.ber.App;
+import com.blazingwin.ber.di.modules.ApplicationModule;
 
 import javax.inject.Singleton;
 

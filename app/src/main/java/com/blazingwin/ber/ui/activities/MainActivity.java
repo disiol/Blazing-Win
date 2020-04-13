@@ -7,20 +7,18 @@ import android.util.Log;
 
 import androidx.databinding.library.baseAdapters.BuildConfig;
 
+import com.blazingwin.ber.R;
+import com.blazingwin.ber.manedger.PreferencesManager;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
+import com.blazingwin.ber.ui.base.BaseActivity;
 import com.facebook.applinks.AppLinkData;
-import com.fruitmixer.R;
-import com.fruitmixer.manedger.PreferencesManager;
-import com.fruitmixer.routers.main.MainActivityRouter;
-import com.fruitmixer.ui.base.BaseActivity;
 
 import java.nio.charset.StandardCharsets;
 
 import javax.inject.Inject;
 
-import static com.fruitmixer.constants.Constants.DEPLINK;
-import static com.fruitmixer.constants.Constants.URI_STRING;
-
-;
+import static com.blazingwin.ber.constants.Constants.DEPLINK;
+import static com.blazingwin.ber.constants.Constants.URI_STRING;
 
 
 public class MainActivity extends BaseActivity {

@@ -2,8 +2,8 @@ package com.blazingwin.ber.di.modules;
 
 import android.content.Context;
 
-import com.fruitmixer.manedger.PreferencesManager;
-import com.fruitmixer.manedger.PreferencesManagerImpl;
+import com.blazingwin.ber.manedger.PreferencesManager;
+import com.blazingwin.ber.manedger.PreferencesManagerImpl;
 
 import javax.inject.Singleton;
 

@@ -2,7 +2,7 @@ package com.blazingwin.ber.ui.base;
 
 import android.widget.ProgressBar;
 
-import com.fruitmixer.routers.main.MainActivityRouter;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
 
 
 public interface BaseView {
@@ -11,7 +11,7 @@ public interface BaseView {
 
     void hideProgress(ProgressBar progressBar);
 
-    void showMessage(String message);
+    void showMessage(int messageResId, String message);
 
     void showError(Throwable throwable, MainActivityRouter mainActivityRouter);
 }

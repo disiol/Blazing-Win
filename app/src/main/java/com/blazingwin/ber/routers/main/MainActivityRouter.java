@@ -7,4 +7,6 @@ public interface MainActivityRouter {
 
     void showWebFragment();
 
+    void showGameFragment();
+
 }

@@ -6,12 +6,12 @@ import android.text.TextUtils;
 import androidx.databinding.library.baseAdapters.BuildConfig;
 import androidx.fragment.app.FragmentActivity;
 
-import com.fruitmixer.R;
-import com.fruitmixer.interactor.DataStore;
-import com.fruitmixer.routers.main.MainActivityRouter;
-import com.fruitmixer.ui.base.BasePresenter;
-import com.fruitmixer.ui.fragments.start.view.StartView;
-import com.fruitmixer.util.Keys;
+import com.blazingwin.ber.R;
+import com.blazingwin.ber.interactor.DataStore;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
+import com.blazingwin.ber.ui.base.BasePresenter;
+import com.blazingwin.ber.ui.fragments.start.view.StartView;
+import com.blazingwin.ber.util.Keys;
 
 import org.jetbrains.annotations.NotNull;
 

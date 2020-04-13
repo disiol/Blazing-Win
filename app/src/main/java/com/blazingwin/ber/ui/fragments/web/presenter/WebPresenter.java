@@ -2,10 +2,8 @@ package com.blazingwin.ber.ui.fragments.web.presenter;
 
 
 
-
-
-import com.fruitmixer.ui.base.BasePresenter;
-import com.fruitmixer.ui.fragments.web.view.WebView;
+import com.blazingwin.ber.ui.base.BasePresenter;
+import com.blazingwin.ber.ui.fragments.web.view.WebView;
 
 import javax.inject.Inject;
 

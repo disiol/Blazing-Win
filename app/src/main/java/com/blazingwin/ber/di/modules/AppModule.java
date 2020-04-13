@@ -1,8 +1,7 @@
 package com.blazingwin.ber.di.modules;
 
-
-import com.fruitmixer.api.Api;
-import com.fruitmixer.interactor.DataStore;
+import com.blazingwin.ber.api.Api;
+import com.blazingwin.ber.interactor.DataStore;
 import com.google.gson.Gson;
 
 import javax.inject.Singleton;

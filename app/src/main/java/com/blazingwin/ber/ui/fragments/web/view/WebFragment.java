@@ -18,18 +18,19 @@ import androidx.annotation.Nullable;
 import androidx.browser.customtabs.CustomTabsIntent;
 import androidx.databinding.library.baseAdapters.BuildConfig;
 
-import com.fruitmixer.R;
-import com.fruitmixer.databinding.FragmentWebBinding;
-import com.fruitmixer.manedger.PreferencesManager;
-import com.fruitmixer.routers.main.MainActivityRouter;
-import com.fruitmixer.ui.base.BaseBindingFragment;
-import com.fruitmixer.ui.fragments.web.presenter.WebPresenter;
+
+import com.blazingwin.ber.R;
+import com.blazingwin.ber.databinding.FragmentWebBinding;
+import com.blazingwin.ber.manedger.PreferencesManager;
+import com.blazingwin.ber.routers.main.MainActivityRouter;
+import com.blazingwin.ber.ui.base.BaseBindingFragment;
+import com.blazingwin.ber.ui.fragments.web.presenter.WebPresenter;
 
 import java.nio.charset.StandardCharsets;
 
 import javax.inject.Inject;
 
-import static com.fruitmixer.constants.Constants.URI_STRING;
+import static com.blazingwin.ber.constants.Constants.URI_STRING;
 
 
 public class WebFragment extends BaseBindingFragment<WebPresenter, FragmentWebBinding> implements WebView {
@@ -117,7 +118,7 @@ public class WebFragment extends BaseBindingFragment<WebPresenter, FragmentWebBi
     }
 
     @Override
-    public void showMessage(String message) {
+    public void showMessage(int messageResId, String message) {
 
     }
 

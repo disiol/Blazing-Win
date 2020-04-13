@@ -1,10 +1,7 @@
 package com.blazingwin.ber.di.modules;
 
-
-
-
-import com.fruitmixer.di.scopes.ActivityScope;
-import com.fruitmixer.ui.activities.MainActivity;
+import com.blazingwin.ber.di.scopes.ActivityScope;
+import com.blazingwin.ber.ui.activities.MainActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

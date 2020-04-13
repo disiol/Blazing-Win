@@ -121,11 +121,12 @@ public class StartFragment extends BaseBindingFragment<StartPresenter, StartBind
     @Override
     public void showGame(MainActivityRouter mainActivityRouter) {
         forRanGame.edit().putBoolean(SHOW_GAME, true).apply();
-        showGameFragment();
+        showGameFragment(mainActivityRouter);
 
     }
 
-    private void showGameFragment() {
+    private void showGameFragment(MainActivityRouter mainActivityRouter) {
+        mainActivityRouter.showGameFragment();
 
     }
 
@@ -155,6 +156,6 @@ public class StartFragment extends BaseBindingFragment<StartPresenter, StartBind
     public void showError(Throwable throwable, MainActivityRouter mainActivityRouter) {
         forRanGame.edit().putBoolean(SHOW_GAME, true).apply();
 
-       showGameFragment();
+       showGameFragment(mainActivityRouter);
     }
 }

@@ -31,7 +31,6 @@ public class QuizFragment extends BaseBindingFragment<QuizPresenter, StartBindin
     private Button mTrueButton;
     private Button mFalseButton;
     private Button mNextButton;
-    private Button mAnswerButton;
 
     private TextView mQuestionTextView;
 
@@ -62,12 +61,6 @@ public class QuizFragment extends BaseBindingFragment<QuizPresenter, StartBindin
 
         mFalseButton = getActivity().findViewById(R.id.buttonFalse);
         mFalseButton.setOnClickListener(v -> checkAnswer(false));
-
-        mNextButton = getActivity().findViewById(R.id.buttonNext);
-        mNextButton.setOnClickListener(v -> {
-            mCurrentIndex = (mCurrentIndex + 1) % mQuestions.length;
-            setTextQuestion();
-        });
 
 
     }
@@ -116,6 +109,9 @@ public class QuizFragment extends BaseBindingFragment<QuizPresenter, StartBindin
                 .setCancelable(false)
                 .setNegativeButton("ОК",
                         (dialog, id) -> {
+                            mCurrentIndex = (mCurrentIndex + 1) % mQuestions.length;
+                            setTextQuestion();
+
                             dialog.cancel();
                         });
         AlertDialog alert = builder.create();

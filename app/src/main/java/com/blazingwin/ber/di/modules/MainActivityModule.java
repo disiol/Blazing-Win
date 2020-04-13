@@ -4,6 +4,7 @@ import com.blazingwin.ber.di.scopes.ActivityScope;
 import com.blazingwin.ber.di.scopes.FragmentScope;
 import com.blazingwin.ber.routers.main.MainActivityRouter;
 import com.blazingwin.ber.routers.main.MainActivityRouterImpl;
+import com.blazingwin.ber.ui.fragments.quiz.view.QuizFragment;
 import com.blazingwin.ber.ui.fragments.start.view.StartFragment;
 import com.blazingwin.ber.ui.fragments.web.view.WebFragment;
 
@@ -24,6 +25,10 @@ public interface MainActivityModule {
     @FragmentScope
     @ContributesAndroidInjector
     StartFragment logoFragment();
+
+    @FragmentScope
+    @ContributesAndroidInjector
+    QuizFragment quizFragment();
 
 
 }

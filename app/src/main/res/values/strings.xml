@@ -34,21 +34,21 @@
     <string name="facebook_app_id">148531603259219</string>
 
 
-    <string name="correct_toast">Правильно!</string>
-    <string name="incorrect_toast">Неправильно!</string>
+    <string name="correct_toast">That\'s right!</string>
+    <string name="incorrect_toast">Incorrectly!</string>
 
-    <string name="question_1">Азия является родиной домашней кошки?</string>
-    <string name="question_2">На знамени Спартака была изображена бронзовая кошка?</string>
-    <string name="question_3">В Китае самая большая «плотность кошачьего населения»? </string>
-    <string name="question_4">Любимого кота Виктора Гюго звали Крендель? </string>
-    <string name="question_5">Автором выражения: «Быстро только кошки плодятся» является Остап Бендер?</string>
+    <string name="question_1"> Asia is the homeland of a domestic cat? </string>
+    <string name="question_2"> On Spartacus\'s banner was represented a bronze cat? </string>
+    <string name="question_3"> China has the largest "cat density"? </string>
+    <string name="question_4"> Victor Hugo \'s favorite cat was Krendel? </string>
+    <string name="question_5"> Ostap Bender is the author of the expression: "Fast only cats are produced"? </string>
 
     <string-array name="answers">
-        <item>Африка является родиной домашней кошки</item>
-        <item>Действительно, на знамени Спартака была кошка</item>
-        <item>В Австралии. На десять жителей приходится девять кошек</item>
-        <item>Любимого кота звали Гаврош</item>
-        <item>Остап произносит эту фразу в романе «Двенадцать стульев»</item>
+        <item> Africa is the homeland of a domestic cat </item>
+        <item> Indeed, there was a cat on the Spartak banner </item>
+        <item> In Australia. There are nine cats per ten inhabitants </item>
+        <item> Your favorite cat was called Gavrosh </item>
+        <item> Ostap utters this phrase in the novel "Twelve Chairs" </item>
     </string-array>
 
 

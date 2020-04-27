@@ -27,7 +27,7 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
-                onesignal_app_id               : '468f9fc8-b35f-43ab-a07a-a5152f4a4ec4',
+                onesignal_app_id               : 'REMOTE',
                 // Project number pulled from dashboard, local value is ignored.
                 onesignal_google_project_number: 'REMOTE'
         ]
@@ -85,6 +85,5 @@ dependencies {
 
 //OneSignal sdk
     implementation 'com.onesignal:OneSignal:3.13.0'
-
     implementation 'com.facebook.android:facebook-android-sdk:5.15.3'
 }
